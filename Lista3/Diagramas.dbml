@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Lista3Questao1" Class="DiagramasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Lista3Questao1;User ID=sa" SettingsObjectName="Lista3.Properties.Settings" SettingsPropertyName="Lista3Questao1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Aluno" Member="Alunos">
+    <Type Name="Aluno">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idCurso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Aluno_Boletim" Member="Boletims" ThisKey="id" OtherKey="idAluno" Type="Boletim" />
+      <Association Name="Curso_Aluno" Member="Curso" ThisKey="idCurso" OtherKey="id" Type="Curso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Boletim" Member="Boletims">
+    <Type Name="Boletim">
+      <Column Name="ano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAluno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nota1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nota2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nota3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nota4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mediaParcial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="notaFinal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mediaFinal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Aluno_Boletim" Member="Aluno" ThisKey="idAluno" OtherKey="id" Type="Aluno" IsForeignKey="true" />
+      <Association Name="Disciplina_Boletim" Member="Disciplina" ThisKey="idDisciplina" OtherKey="id" Type="Disciplina" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Curso" Member="Cursos">
+    <Type Name="Curso">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Curso_Aluno" Member="Alunos" ThisKey="id" OtherKey="idCurso" Type="Aluno" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Disciplina" Member="Disciplinas">
+    <Type Name="Disciplina">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Disciplina_Boletim" Member="Boletims" ThisKey="id" OtherKey="idDisciplina" Type="Boletim" />
+    </Type>
+  </Table>
+</Database>

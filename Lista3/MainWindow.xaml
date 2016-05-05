@@ -1,0 +1,38 @@
+﻿<Window x:Class="Lista3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lista3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Menu>
+            
+            <MenuItem Header="Cadastros" >
+                
+                <MenuItem Header="Cursos... " Click="CadCursosClick" />
+                
+                <MenuItem Header="Disiciplinas..." Click="CadDisiciplinaClick"/>
+
+                <MenuItem Header="Aluno..." Click="CadDisiciplinaClick"/>
+
+                <MenuItem Header="Aluno em curso..." Click="CadDisiciplinaClick"/>
+
+                <MenuItem Header="Nota..." Click="CadDisiciplinaClick"/>
+
+                <Separator/>
+                
+                <MenuItem Header="Sair" Click="SairClick"/>
+                
+            </MenuItem>
+
+            <MenuItem Header="Consultas">
+                <MenuItem Header="Cursos Cadastrados..." Click="ConsCursosClick"/>
+                <MenuItem Header="Alunos Cadastrados..." Click="ConsAlunosClick"/>
+                <MenuItem Header="Disiciplinas Cadastrados..." Click="ConsDisciplinasClick"/>
+            </MenuItem>
+            
+        </Menu>
+    </Grid>
+</Window>

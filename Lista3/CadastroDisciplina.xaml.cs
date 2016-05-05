@@ -33,7 +33,7 @@ namespace Lista3
             x.descricao = txtDesc.Text;
             dc.Disciplinas.InsertOnSubmit(x);
             dc.SubmitChanges();
-            //cu
+            //cuzinho
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)

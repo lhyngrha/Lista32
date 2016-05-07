@@ -33,7 +33,8 @@ namespace Lista3
 
         private void CadDisiciplinaClick(object sender, RoutedEventArgs e)
         {
-
+            CadastroDisciplina x = new CadastroDisciplina();
+            x.Show();
         }
 
         private void SairClick(object sender, RoutedEventArgs e)
@@ -54,6 +55,18 @@ namespace Lista3
         private void ConsDisciplinasClick(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CadAlunoClick(object sender, RoutedEventArgs e)
+        {
+            CadAluno x = new CadAluno();
+            x.Show();
+        }
+
+        private void CadNotaClick(object sender, RoutedEventArgs e)
+        {
+            CadNota x = new CadNota();
+            x.Show();
         }
     }
 }

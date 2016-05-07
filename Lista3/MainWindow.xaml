@@ -15,11 +15,9 @@
                 
                 <MenuItem Header="Disiciplinas..." Click="CadDisiciplinaClick"/>
 
-                <MenuItem Header="Aluno..." Click="CadDisiciplinaClick"/>
+                <MenuItem Header="Aluno em curso..." Click="CadAlunoClick"/>
 
-                <MenuItem Header="Aluno em curso..." Click="CadDisiciplinaClick"/>
-
-                <MenuItem Header="Nota..." Click="CadDisiciplinaClick"/>
+                <MenuItem Header="Nota..." Click="CadNotaClick"/>
 
                 <Separator/>
                 

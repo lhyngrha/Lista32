@@ -56,11 +56,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CadAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CadastroCurso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CadastroDisciplina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadNota.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,16 +80,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CadAluno.xaml.cs">
+      <DependentUpon>CadAluno.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CadastroCurso.xaml.cs">
       <DependentUpon>CadastroCurso.xaml</DependentUpon>
     </Compile>
     <Compile Include="CadastroDisciplina.xaml.cs">
       <DependentUpon>CadastroDisciplina.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Diagramas.designer.cs">
+    <Compile Include="CadNota.xaml.cs">
+      <DependentUpon>CadNota.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Diagramas.dbml</DependentUpon>
+      <DependentUpon>DataBase.dbml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -102,16 +116,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Diagramas.dbml.layout">
-      <DependentUpon>Diagramas.dbml</DependentUpon>
+    <None Include="DataBase.dbml.layout">
+      <DependentUpon>DataBase.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Diagramas.dbml">
+    <None Include="DataBase.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Diagramas.designer.cs</LastGenOutput>
+      <LastGenOutput>DataBase.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

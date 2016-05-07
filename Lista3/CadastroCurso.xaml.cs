@@ -24,7 +24,7 @@ namespace Lista3
             InitializeComponent();
         }
 
-        private DiagramasDataContext dc = new DiagramasDataContext();
+        private DataBaseDataContext dc = new DataBaseDataContext();
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
         {

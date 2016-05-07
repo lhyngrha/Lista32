@@ -33,5 +33,16 @@ namespace Lista3.Properties {
                 return ((string)(this["Lista3Questao1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GABRIELDINI5F24\\GILSON;Initial Catalog=CursosLista3;User ID=sa;Passwo" +
+            "rd=senha")]
+        public string CursosLista3ConnectionString {
+            get {
+                return ((string)(this["CursosLista3ConnectionString"]));
+            }
+        }
     }
 }

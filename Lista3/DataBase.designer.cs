@@ -22,8 +22,8 @@ namespace Lista3
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Lista3Questao1")]
-	public partial class DiagramasDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CursosLista3")]
+	public partial class DataBaseDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -44,31 +44,31 @@ namespace Lista3
     partial void DeleteDisciplina(Disciplina instance);
     #endregion
 		
-		public DiagramasDataContext() : 
-				base(global::Lista3.Properties.Settings.Default.Lista3Questao1ConnectionString, mappingSource)
+		public DataBaseDataContext() : 
+				base(global::Lista3.Properties.Settings.Default.CursosLista3ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DiagramasDataContext(string connection) : 
+		public DataBaseDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DiagramasDataContext(System.Data.IDbConnection connection) : 
+		public DataBaseDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DiagramasDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataBaseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DiagramasDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataBaseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -380,9 +380,9 @@ namespace Lista3
 		
 		private System.Nullable<int> _mediaParcial;
 		
-		private System.Nullable<int> _notaFinal;
-		
 		private System.Nullable<int> _mediaFinal;
+		
+		private System.Nullable<int> _notaFinal;
 		
 		private EntityRef<Aluno> _Aluno;
 		
@@ -408,10 +408,10 @@ namespace Lista3
     partial void Onnota4Changed();
     partial void OnmediaParcialChanging(System.Nullable<int> value);
     partial void OnmediaParcialChanged();
-    partial void OnnotaFinalChanging(System.Nullable<int> value);
-    partial void OnnotaFinalChanged();
     partial void OnmediaFinalChanging(System.Nullable<int> value);
     partial void OnmediaFinalChanged();
+    partial void OnnotaFinalChanging(System.Nullable<int> value);
+    partial void OnnotaFinalChanged();
     #endregion
 		
 		public Boletim()
@@ -589,26 +589,6 @@ namespace Lista3
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_notaFinal", DbType="Int")]
-		public System.Nullable<int> notaFinal
-		{
-			get
-			{
-				return this._notaFinal;
-			}
-			set
-			{
-				if ((this._notaFinal != value))
-				{
-					this.OnnotaFinalChanging(value);
-					this.SendPropertyChanging();
-					this._notaFinal = value;
-					this.SendPropertyChanged("notaFinal");
-					this.OnnotaFinalChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mediaFinal", DbType="Int")]
 		public System.Nullable<int> mediaFinal
 		{
@@ -625,6 +605,26 @@ namespace Lista3
 					this._mediaFinal = value;
 					this.SendPropertyChanged("mediaFinal");
 					this.OnmediaFinalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_notaFinal", DbType="Int")]
+		public System.Nullable<int> notaFinal
+		{
+			get
+			{
+				return this._notaFinal;
+			}
+			set
+			{
+				if ((this._notaFinal != value))
+				{
+					this.OnnotaFinalChanging(value);
+					this.SendPropertyChanging();
+					this._notaFinal = value;
+					this.SendPropertyChanged("notaFinal");
+					this.OnnotaFinalChanged();
 				}
 			}
 		}

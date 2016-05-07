@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataBase">
+  <DataContextMoniker Name="/DataBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="50d7dd58-2f75-444e-90c9-b03b45f17813" absoluteBounds="4.375, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataBaseDataContext/Aluno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74559c96-7f75-46a7-bea8-2999021ea8be" absoluteBounds="4.39, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c934b92-52d0-4b13-87bc-068a181360ea" absoluteBounds="4.125, 1.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataBaseDataContext/Boletim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83228438-081c-4cdd-8dfe-2be21cf84e62" absoluteBounds="4.14, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 1.85659912109375); (3.875 : 1.85659912109375); (3.875 : 2.99120198567708); (4.125 : 2.99120198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataBaseDataContext/Aluno/Aluno_Boletim" />
+      <nodes>
+        <classShapeMoniker Id="50d7dd58-2f75-444e-90c9-b03b45f17813" />
+        <classShapeMoniker Id="0c934b92-52d0-4b13-87bc-068a181360ea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="741b0a28-625e-4542-a844-5bdba998f0d4" absoluteBounds="3.25, 1, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataBaseDataContext/Curso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34425129-e36c-4ac1-884a-a646f6fe09fa" absoluteBounds="3.265, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 1); (4.25 : 0.625); (5.375 : 0.625); (5.375 : 0.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataBaseDataContext/Curso/Curso_Aluno" />
+      <nodes>
+        <classShapeMoniker Id="741b0a28-625e-4542-a844-5bdba998f0d4" />
+        <classShapeMoniker Id="50d7dd58-2f75-444e-90c9-b03b45f17813" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="89a008de-96cc-451f-86d7-3e2ab72412b5" absoluteBounds="3.5, 3.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataBaseDataContext/Disciplina" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0905897b-84e4-4c4f-a540-64ef7b58e028" absoluteBounds="3.515, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 4.31899251302083); (4.5 : 4.60740397135417); (5.125 : 4.60740397135417); (5.125 : 4.35740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataBaseDataContext/Disciplina/Disciplina_Boletim" />
+      <nodes>
+        <classShapeMoniker Id="89a008de-96cc-451f-86d7-3e2ab72412b5" />
+        <classShapeMoniker Id="0c934b92-52d0-4b13-87bc-068a181360ea" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

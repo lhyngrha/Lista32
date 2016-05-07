@@ -64,18 +64,9 @@ namespace Lista3
                 b.notaFinal = int.Parse(txtNotaFinal.Text);
                 b.mediaFinal = (b.notaFinal + b.mediaParcial) / 2;
             }
-
             else b.mediaFinal = b.mediaParcial;
-        }
-
-        private void btnSelectAluno_Click(object sender, RoutedEventArgs e)
-        {
-            Boletim b = (from f in dc.Boletims where f.idAluno == (int)cbAluno.SelectedValue select f).Single();
-            txtN1.Text = b.nota1.ToString();
-            txtN2.Text = b.nota2.ToString();
-            txtN3.Text = b.nota3.ToString();
-            txtN4.Text = b.nota4.ToString();
-
+            dc.Boletims.InsertOnSubmit(b);
+            dc.SubmitChanges();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -87,6 +78,13 @@ namespace Lista3
             b.nota4 = int.Parse(txtN4.Text);
             b.notaFinal = int.Parse(txtNotaFinal.Text);
             dc.SubmitChanges();
+        }
+
+        private void btnSelect_Click(object sender, RoutedEventArgs e)
+        {
+            var r = from f in dc.Boletims select new { f.idAluno, f.ano, f.idDisciplina, f.nota1, f.nota2, f.nota3, f.nota4, f.notaFinal, f.mediaFinal, f.mediaParcial };
+            dataGrid.ItemsSource = null;
+            dataGrid.ItemsSource = r.ToList();
         }
     }
 }

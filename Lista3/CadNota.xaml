@@ -19,10 +19,9 @@
         <ComboBox x:Name="cbAluno" HorizontalAlignment="Left" Margin="142.486,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="6,75,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="5,41,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btnUpdate_Click"/>
-        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="105,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="105,75,0,0" VerticalAlignment="Top" Width="75" Click="btnSelect_Click"/>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="170" Margin="22,112,0,0" VerticalAlignment="Top" Width="554" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtNotaFinal" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="Nota Final" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSelectAluno" Content="Sel Aluno" HorizontalAlignment="Left" Margin="225,41,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectAluno_Click"/>
 
     </Grid>
 </Window>
